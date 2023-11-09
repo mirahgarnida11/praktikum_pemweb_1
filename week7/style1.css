@@ -1,0 +1,31 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+}  
+.kotak{
+        height: 700px;
+        width: 320px;
+        border: 2px solid;
+    }
+   
+
+
+.merah{
+    background-color: red;
+
+}
+.oren{
+    
+    background-color: orange;
+    
+}
+.ungu{
+    
+    background-color: purple;
+   
+}
+.biru{
+    
+    background-color: aqua;
+    
+}
