@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+    input {
+      width: 98%;
+      padding: 8px;
+      margin-bottom: 16px;
+    }
+
+    button{
+    background-color: brown;
+    border: 4px solid black;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgb(79, 119, 79);
+    width: 200px;
+    margin: 10px auto;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Form Validator</h2>
+  <form id="myForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Nama Lengkap">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="h***6@gmail.com">
+
+    <label for="jam">Jam Berangkat:</label>
+    <input type="time" id="jam" name="jam_berangkat">
+
+    <label for="tujuan">Tempat Tujuan:</label>
+    <input type="text" id="tujuan" name="tujuan_tempat" placeholder="Tulis tujuan keberangkatan anda">
+
+    <label for="jumlah">Jumlah Tiket:</label>
+    <input type="number" id="jumlah" name="jumlah_tiket"><br>
+
+
+    <button type="button" onclick="validateForm()">Submit</button>
+  </form>
+
+  <script>
+    function validateForm() {
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var jam = document.getElementById("jam").value;
+      var tujuan = document.getElementById("tujuan").value;
+      var jumlah = document.getElementById("jumlah").value;
+      if (name == "" || email == "" || jam == "" || tujuan == "" || jumlah == "") {
+        alert("Form tidak boleh kosong!");
+      } else {
+        alert("Form sudah diisi!");
+      }
+        // Lakukan tindakan selanjutnya, seperti mengirim data ke server.
+      }
+
+  </script>
+
+</body>
+</html>

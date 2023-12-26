@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image picker</title>
+    <script>
+        function image_picker(){
+            const list_image = ["butterfly.jpg", "capung.jpg", "lebah.jpeg"];
+            let pilihan = document.getElementById("opsi").value;
+
+            if(pilihan == "butterfly"){
+                let select = list_image[0]; //butterfly.jpg
+                document.getElementById("gambar").src = `img_tugas4/${select}`;
+            }
+
+            if(pilihan == "capung"){
+                let select = list_image[1]; //capung.jpeg
+                document.getElementById("gambar").src = `img_tugas4/${select}`;
+            }
+
+            if(pilihan == "lebah"){
+                let select = list_image[2]; //lebah.jpg
+                document.getElementById("gambar").src = `img_tugas4/${select}`;
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    <h1>Image picker</h1>
+
+
+    <select name="" id="opsi" onchange="image_picker()">
+        <option value="">Pilih Gambar</option>
+        <option value="butterfly">butterfly</option>
+        <option value="capung">capung</option>
+        <option value="lebah">lebah</option>
+    </select>
+
+    <div class="container">
+        <img id="gambar" width="200 px">
+    </div>
+</body>
+</html>
